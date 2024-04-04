@@ -58,7 +58,7 @@ def llm(query, history):
     min_stream_length = 10
     max_stream_length = 20
     while pos < nr_chars:
-        pos = min(nr_chars -1,pos+min_stream_length+int(max_stream_length*random.random()))
+        pos = min(nr_chars,pos+min_stream_length+int(max_stream_length*random.random()))
         yield answer[0:pos]
         time.sleep(0.3 + 0.2 * random.random())
     
